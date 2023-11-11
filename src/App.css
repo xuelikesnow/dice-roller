@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@font-face {
+	font-family: BerkshireSwash;
+	src: url(./Assets/BerkshireSwash.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.die {
+	font-family: BerkshireSwash;
+	width: 120px;
+	margin: 10px auto;
+	padding: 20px;
+	font-size: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	background-image: url("./Assets/Background.jpeg");
+	background-size: 100% 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+	font-family: BerkshireSwash;
+	margin-top: 50px;
+	margin-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* CSS */
+button {
+	align-items: center;
+	background-color: #fee6e3;
+	border: 2px solid #111;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #111;
+	cursor: pointer;
+	display: flex;
+	font-family: Inter, sans-serif;
+	font-size: 16px;
+	height: 48px;
+	justify-content: center;
+	line-height: 24px;
+	max-width: 100%;
+	padding: 0 25px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	margin: 30px auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:after {
+	background-color: #111;
+	border-radius: 8px;
+	content: "";
+	display: block;
+	height: 48px;
+	left: 0;
+	width: 100%;
+	position: absolute;
+	top: -2px;
+	transform: translate(8px, 8px);
+	transition: transform 0.2s ease-out;
+	z-index: -1;
+}
+
+button:hover:after {
+	transform: translate(0, 0);
+}
+
+button:active {
+	background-color: #ffdeda;
+	outline: 0;
+}
+
+button:hover {
+	outline: 0;
 }
